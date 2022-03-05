@@ -7,15 +7,15 @@ public class RomanNumeralConverter {
         if (value >= 10) {
             appendRepeatedNumbers(result, value/10, RomanNumber.X);
         } else if (value == 4) {
-            result.append(RomanNumber.I.getValue())
-                    .append(RomanNumber.V.getValue());
+            result.append(RomanNumber.I.getRomanString())
+                    .append(RomanNumber.V.getRomanString());
         } else if (value == 9) {
-            result.append(RomanNumber.I.getValue())
-                    .append(RomanNumber.X.getValue());
+            result.append(RomanNumber.I.getRomanString())
+                    .append(RomanNumber.X.getRomanString());
         } else {
             int remainder = value;
             if (value >= 5) {
-                result.append(RomanNumber.V.getValue());
+                result.append(RomanNumber.V.getRomanString());
                 remainder -= 5;
             }
             appendRepeatedNumbers(result, remainder, RomanNumber.I);
@@ -25,9 +25,8 @@ public class RomanNumeralConverter {
 
     private void appendRepeatedNumbers(StringBuilder result, int remainder, RomanNumber romanNumber) {
         if (remainder == 4) {
-
         }
-        result.append(romanNumber.getValue().repeat(Math.max(0, remainder)));
+        result.append(romanNumber.getRomanString().repeat(Math.max(0, remainder)));
     }
 
 }

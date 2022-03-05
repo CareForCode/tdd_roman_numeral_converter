@@ -1,17 +1,23 @@
 package roman_numeral_converter;
 
 public enum RomanNumber {
-    I("I"),
-    V("V"),
-    X("X");
+    I("I", 1),
+    V("V", 5),
+    X("X", 10);
 
-    private String value;
+    private final String romanString;
+    private final int arabicValue;
 
-    public String getValue() {
-        return value;
+    RomanNumber(String romanString, int arabicValue) {
+        this.romanString = romanString;
+        this.arabicValue = arabicValue;
     }
 
-    RomanNumber(String value) {
-        this.value = value;
+    public String getRomanString() {
+        return romanString;
+    }
+
+    public int getArabicValue() {
+        return arabicValue;
     }
 }
