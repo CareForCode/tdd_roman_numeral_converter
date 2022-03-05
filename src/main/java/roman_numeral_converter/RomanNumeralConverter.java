@@ -7,9 +7,11 @@ public class RomanNumeralConverter {
         if (value >= 10) {
             appendRepeatedNumbers(result, value/10, RomanNumber.X);
         } else if (value == 4) {
-            result.append(RomanNumber.I.getValue() + RomanNumber.V.getValue());
+            result.append(RomanNumber.I.getValue())
+                    .append(RomanNumber.V.getValue());
         } else if (value == 9) {
-            result.append(RomanNumber.I.getValue() + RomanNumber.X.getValue());
+            result.append(RomanNumber.I.getValue())
+                    .append(RomanNumber.X.getValue());
         } else {
             int remainder = value;
             if (value >= 5) {
