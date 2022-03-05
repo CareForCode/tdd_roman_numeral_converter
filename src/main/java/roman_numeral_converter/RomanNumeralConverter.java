@@ -18,7 +18,7 @@ public class RomanNumeralConverter {
     }
 
     private void appendRepeatedNumbers(StringBuilder result, int repeatInterval, RomanNumber romanNumber) {
-        if (repeatInterval == 4) {
+        if (repeatInterval > 3) {
             int tempInt = 0;
             if (!result.isEmpty()) {
                 char lastChar = result.charAt(result.length() - 1);
