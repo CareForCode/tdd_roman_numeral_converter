@@ -9,6 +9,8 @@ public class RomanNumeralConverter {
         String result;
         if (value >= 5) {
             result =  V;
+            int remainder = value - 5;
+            result += I.repeat(Math.max(0, remainder));
         } else {
             result = I.repeat(Math.max(0, value));
         }
