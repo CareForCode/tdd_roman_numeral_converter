@@ -25,13 +25,11 @@ public class RomanNumeralConverter {
 
     private void appendRepeatedNumbers(StringBuilder result, int repeatInterval, RomanNumber romanNumber) {
         if (repeatInterval == 4) {
-            int resultValue = 0;
-            for (char c : result.toString().toCharArray()) {
-                resultValue += RomanNumber.convertCharToIntValue(c);
-            }
-
+            result.append(romanNumber);
+            result.append(romanNumber.getNextRomanNumber());
+        } else {
+            result.append(romanNumber.getRomanString().repeat(Math.max(0, repeatInterval)));
         }
-        result.append(romanNumber.getRomanString().repeat(Math.max(0, repeatInterval)));
     }
 
 }
