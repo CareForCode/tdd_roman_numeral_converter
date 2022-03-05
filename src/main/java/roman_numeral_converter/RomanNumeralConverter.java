@@ -20,13 +20,12 @@ public class RomanNumeralConverter {
                 result =  V;
                 remainder -= 5;
             }
-            result = getRepeatedNumerals(result, remainder, I);
+            result += getRepeatedNumerals(result, remainder, I);
         }
         return result;
     }
 
     private String getRepeatedNumerals(String result, int repeatInterval, String romanNumeral) {
-        result += romanNumeral.repeat(Math.max(0, repeatInterval));
-        return result;
+        return romanNumeral.repeat(Math.max(0, repeatInterval));
     }
 }
