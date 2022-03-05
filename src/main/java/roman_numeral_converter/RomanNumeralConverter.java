@@ -4,10 +4,10 @@ public class RomanNumeralConverter {
     public static final String ROMAN_1 = "I";
 
     public String convert(int value) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < value; i++) {
-            result += ROMAN_1;
+            result.append(ROMAN_1);
         }
-        return result;
+        return result.toString();
     }
 }
