@@ -5,23 +5,27 @@ public class RomanNumeralConverter {
     public String convert(int value) {
         StringBuilder result = new StringBuilder();
         if (value >= 10) {
-            result.append(getRepeatedNumerals(value/10, RomanNumbers.X));
+            appendRepeatedNumbers(result, value/10, RomanNumber.X);
         } else if (value == 4) {
-            result.append(RomanNumbers.I.getValue() + RomanNumbers.V.getValue());
+            result.append(RomanNumber.I.getValue() + RomanNumber.V.getValue());
         } else if (value == 9) {
-            result.append(RomanNumbers.I.getValue() + RomanNumbers.X.getValue());
+            result.append(RomanNumber.I.getValue() + RomanNumber.X.getValue());
         } else {
             int remainder = value;
             if (value >= 5) {
-                result.append(RomanNumbers.V.getValue());
+                result.append(RomanNumber.V.getValue());
                 remainder -= 5;
             }
-            result.append(getRepeatedNumerals(remainder, RomanNumbers.I));
+            appendRepeatedNumbers(result, remainder, RomanNumber.I);
         }
         return result.toString();
     }
 
-    private String getRepeatedNumerals(int repeatInterval, RomanNumbers romanNumeral) {
+    private void appendRepeatedNumbers(StringBuilder result, int remainder, RomanNumber romanNumber) {
+        result.append(getRepeatedNumerals(remainder, romanNumber));
+    }
+
+    private String getRepeatedNumerals(int repeatInterval, RomanNumber romanNumeral) {
         if (repeatInterval == 4) {
 
         }

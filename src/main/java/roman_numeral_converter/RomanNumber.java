@@ -1,6 +1,6 @@
 package roman_numeral_converter;
 
-public enum RomanNumbers {
+public enum RomanNumber {
     I("I"),
     V("V"),
     X("X");
@@ -11,7 +11,7 @@ public enum RomanNumbers {
         return value;
     }
 
-    RomanNumbers(String value) {
+    RomanNumber(String value) {
         this.value = value;
     }
 }
