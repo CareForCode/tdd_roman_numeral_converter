@@ -15,7 +15,12 @@ public class RomanNumberTest {
     }
 
     @Test
-    void todo() {
+    void getNextRomanNumber_I_isV() {
         assertThat(RomanNumber.I.getNextRomanNumber()).isEqualTo(RomanNumber.V);
+    }
+
+    @Test
+    void getNextRomanNumber_V_isX() {
+        assertThat(RomanNumber.V.getNextRomanNumber()).isEqualTo(RomanNumber.X);
     }
 }
