@@ -20,12 +20,17 @@ public class RomanNumeralConverter {
     private void appendRepeatedNumbers(StringBuilder result, int repeatInterval, RomanNumber romanNumber) {
         if (repeatInterval == 4) {
             int tempInt = 0;
+            if (!result.isEmpty()) {
+                char lastChar = result.charAt(result.length() - 1);
+                result.deleteCharAt(result.length()-1);
+                tempInt += RomanNumber.convertCharToIntValue(lastChar);
+            }
             for (int i = 0; i < 5; i++) {
                 tempInt += romanNumber.getArabicValue();
             }
 
             result.append(romanNumber);
-            result.append(romanNumber.ofNumber(tempInt));
+            result.append(RomanNumber.ofNumber(tempInt));
         } else {
             result.append(romanNumber.getRomanString().repeat(Math.max(0, repeatInterval)));
         }
