@@ -9,11 +9,6 @@ public class RomanNumeralConverterTest {
     private final RomanNumeralConverter converter = new RomanNumeralConverter();
 
     @Test
-    void initConverter() {
-        RomanNumeralConverter converter = new RomanNumeralConverter();
-    }
-
-    @Test
     void convert1_getI() {
         assertThat(converter.convert(1)).isEqualTo(RomanNumeralConverter.ROMAN_1);
     }
