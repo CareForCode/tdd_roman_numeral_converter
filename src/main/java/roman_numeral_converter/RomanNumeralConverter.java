@@ -29,6 +29,7 @@ public class RomanNumeralConverter {
             for (char c : result.toString().toCharArray()) {
                 resultValue += RomanNumber.convertCharToIntValue(c);
             }
+
         }
         result.append(romanNumber.getRomanString().repeat(Math.max(0, repeatInterval)));
     }

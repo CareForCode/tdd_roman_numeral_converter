@@ -15,9 +15,18 @@ public enum RomanNumber {
     }
 
     private static RomanNumber ofChar(char c) {
-        for (RomanNumber value : values()) {
-            if (value.romanString.equalsIgnoreCase(String.valueOf(c))) {
-                return value;
+        for (RomanNumber element : values()) {
+            if (element.romanString.equalsIgnoreCase(String.valueOf(c))) {
+                return element;
+            }
+        }
+        return UNKNOWN;
+    }
+
+    public static RomanNumber ofNumber(int number) {
+        for (RomanNumber element : values()) {
+            if (element.arabicValue == number) {
+                return element;
             }
         }
         return UNKNOWN;
