@@ -10,6 +10,8 @@ public class RomanNumeralConverter {
             return I.repeat(Math.max(0, value));
         } else if (value == 4) {
             return I + V;
+        } else if (value == 6) {
+            return V + I;
         } else {
             return V;
         }
