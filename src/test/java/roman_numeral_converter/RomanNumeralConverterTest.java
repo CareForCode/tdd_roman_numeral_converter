@@ -16,4 +16,11 @@ public class RomanNumeralConverterTest {
 
         assertThat(converter.convert(1)).isEqualTo("I");
     }
+
+    @Test
+    void convert2_getII() {
+        RomanNumeralConverter converter = new RomanNumeralConverter();
+
+        assertThat(converter.convert(2)).isEqualTo("II");
+    }
 }
