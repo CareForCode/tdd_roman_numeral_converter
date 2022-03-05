@@ -22,8 +22,13 @@ public class RomanNumeralConverter {
 
     private void appendRepeatedNumbers(StringBuilder result, int repeatInterval, RomanNumber romanNumber) {
         if (repeatInterval == 4) {
+            int tempInt = 0;
+            for (int i = 0; i < 5; i++) {
+                tempInt += romanNumber.getArabicValue();
+            }
+
             result.append(romanNumber);
-            result.append(romanNumber.getNextRomanNumber());
+            result.append(romanNumber.ofNumber(tempInt));
         } else {
             result.append(romanNumber.getRomanString().repeat(Math.max(0, repeatInterval)));
         }
