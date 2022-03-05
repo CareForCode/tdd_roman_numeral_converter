@@ -11,6 +11,6 @@ public class RomanNumberTest {
     @ParameterizedTest
     @CsvSource({"1,I"})
     void ofNumber_1_isI(int arabicNumber, char expectedRomanNumber) {
-        assertThat(RomanNumber.ofNumber(1)).isEqualByComparingTo(RomanNumber.ofChar(expectedRomanNumber));
+        assertThat(RomanNumber.ofNumber(arabicNumber)).isEqualByComparingTo(RomanNumber.ofChar(expectedRomanNumber));
     }
 }
