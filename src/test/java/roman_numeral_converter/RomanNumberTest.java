@@ -14,5 +14,8 @@ public class RomanNumberTest {
         assertThat(RomanNumber.ofNumber(arabicNumber)).isEqualByComparingTo(RomanNumber.ofChar(expectedRomanNumber));
     }
 
-    @T
+    @Test
+    void todo() {
+        assertThat(RomanNumber.I.getNextRomanNumber()).isEqualTo(RomanNumber.V);
+    }
 }

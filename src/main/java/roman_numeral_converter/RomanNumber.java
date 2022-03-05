@@ -43,4 +43,8 @@ public enum RomanNumber {
     public int getArabicValue() {
         return arabicValue;
     }
+
+    public RomanNumber getNextRomanNumber() {
+        return V;
+    }
 }
