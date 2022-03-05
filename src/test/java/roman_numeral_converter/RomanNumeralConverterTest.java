@@ -13,7 +13,7 @@ public class RomanNumeralConverterTest {
     @ParameterizedTest
     @CsvSource({"1,I"})
     void convert1_getI(int number, String expectedRomanNumber) {
-        assertThat(converter.convert(1)).isEqualTo(RomanNumeralConverter.ROMAN_1);
+        assertThat(converter.convert(number)).isEqualTo(expectedRomanNumber);
     }
 
     @Test
