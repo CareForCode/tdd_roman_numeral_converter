@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class RomanNumberTest {
 
     @ParameterizedTest
-    @CsvSource({"1,I"})
+    @CsvSource({"1,I", "5,V", "10,X"})
     void ofNumber_1_isI(int arabicNumber, char expectedRomanNumber) {
         assertThat(RomanNumber.ofNumber(arabicNumber)).isEqualByComparingTo(RomanNumber.ofChar(expectedRomanNumber));
     }
