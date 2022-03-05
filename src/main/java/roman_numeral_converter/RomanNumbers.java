@@ -1,7 +1,10 @@
 package roman_numeral_converter;
 
 public enum RomanNumbers {
-    V("V"), I("I"), X("X");
+    I("I"),
+    V("V"),
+    X("X");
+
     private String value;
 
     public String getValue() {
