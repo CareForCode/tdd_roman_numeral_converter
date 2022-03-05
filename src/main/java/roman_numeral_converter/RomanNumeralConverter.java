@@ -6,9 +6,6 @@ public class RomanNumeralConverter {
         StringBuilder result = new StringBuilder();
         if (value >= 10) {
             appendRepeatedNumbers(result, value/10, RomanNumber.X);
-        } else if (value == 9) {
-            result.append(RomanNumber.I.getRomanString())
-                    .append(RomanNumber.X.getRomanString());
         } else {
             int remainder = value;
             if (value >= 5) {
