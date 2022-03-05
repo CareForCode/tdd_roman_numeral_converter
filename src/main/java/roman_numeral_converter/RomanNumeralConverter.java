@@ -10,9 +10,7 @@ public class RomanNumeralConverter {
         if (value == 5) {
             return ROMAN_5;
         }
-        for (int i = 0; i < value; i++) {
-            result.append(ROMAN_1);
-        }
+        result.append(ROMAN_1.repeat(Math.max(0, value)));
         return result.toString();
     }
 }
