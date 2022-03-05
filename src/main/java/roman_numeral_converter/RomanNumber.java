@@ -40,10 +40,6 @@ public enum RomanNumber {
         return romanString;
     }
 
-    public int getArabicValue() {
-        return arabicValue;
-    }
-
     public RomanNumber getNextRomanNumber() {
         return values()[Math.min(values().length-1, this.ordinal()+1)];
     }
