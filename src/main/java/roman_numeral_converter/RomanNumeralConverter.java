@@ -3,7 +3,7 @@ package roman_numeral_converter;
 public class RomanNumeralConverter {
 
     public String convert(int value) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         if (value >= 10) {
             return getRepeatedNumerals(value/10, RomanNumbers.X);
         } else if (value == 4) {
@@ -13,12 +13,12 @@ public class RomanNumeralConverter {
         } else {
             int remainder = value;
             if (value >= 5) {
-                result = RomanNumbers.V.getValue();
+                result.append(RomanNumbers.V.getValue());
                 remainder -= 5;
             }
-            result += getRepeatedNumerals(remainder, RomanNumbers.I);
+            result.append(getRepeatedNumerals(remainder, RomanNumbers.I));
         }
-        return result;
+        return result.toString();
     }
 
     private String getRepeatedNumerals(int repeatInterval, RomanNumbers romanNumeral) {
