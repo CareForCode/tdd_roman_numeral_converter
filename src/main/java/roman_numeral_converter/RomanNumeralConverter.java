@@ -8,8 +8,8 @@ public class RomanNumeralConverter {
 
     public String convert(int value) {
         String result = "";
-        if (value == 10) {
-            return X;
+        if (value >= 10) {
+            return X.repeat(Math.max(0, value/10));
         } else if (value == 4) {
             return I + V;
         } else if (value == 9) {
