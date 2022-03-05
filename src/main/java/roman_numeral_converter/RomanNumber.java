@@ -14,7 +14,7 @@ public enum RomanNumber {
         this.arabicValue = arabicValue;
     }
 
-    private static RomanNumber ofChar(char c) {
+    public static RomanNumber ofChar(char c) {
         for (RomanNumber element : values()) {
             if (element.romanString.equalsIgnoreCase(String.valueOf(c))) {
                 return element;
