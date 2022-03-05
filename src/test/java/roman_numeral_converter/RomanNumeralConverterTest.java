@@ -11,7 +11,7 @@ public class RomanNumeralConverterTest {
     private final RomanNumeralConverter converter = new RomanNumeralConverter();
 
     @ParameterizedTest
-    @CsvSource({"1,I", "2,II", "3,III"})
+    @CsvSource({"1,I", "2,II", "3,III", "5,V"})
     void convert1_getI(int number, String expectedRomanNumber) {
         assertThat(converter.convert(number)).isEqualTo(expectedRomanNumber);
     }
