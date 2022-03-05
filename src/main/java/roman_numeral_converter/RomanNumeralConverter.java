@@ -24,13 +24,10 @@ public class RomanNumeralConverter {
     }
 
     private void appendRepeatedNumbers(StringBuilder result, int remainder, RomanNumber romanNumber) {
-        result.append(getRepeatedNumerals(remainder, romanNumber));
-    }
-
-    private String getRepeatedNumerals(int repeatInterval, RomanNumber romanNumeral) {
-        if (repeatInterval == 4) {
+        if (remainder == 4) {
 
         }
-        return romanNumeral.getValue().repeat(Math.max(0, repeatInterval));
+        result.append(romanNumber.getValue().repeat(Math.max(0, remainder)));
     }
+
 }
