@@ -8,7 +8,6 @@ public class RomanNumeralConverter {
 
     public String convert(int value) {
         String result = "";
-        int remainder = value;
         if (value == 10) {
             return X;
         } else if (value == 4) {
@@ -16,6 +15,7 @@ public class RomanNumeralConverter {
         } else if (value == 9) {
             return I + X;
         } else {
+            int remainder = value;
             if (value >= 5) {
                 result =  V;
                 remainder -= 5;
