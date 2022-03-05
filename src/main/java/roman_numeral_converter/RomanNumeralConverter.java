@@ -16,6 +16,13 @@ public class RomanNumeralConverter {
             result =  V;
             remainder -= 5;
         }
+        if (remainder == 4) {
+            if (value == 4) {
+                return I + V;
+            } else {
+                return I + X;
+            }
+        }
         result += I.repeat(Math.max(0, remainder));
         return result;
     }
