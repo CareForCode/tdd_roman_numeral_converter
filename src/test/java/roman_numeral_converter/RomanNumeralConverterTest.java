@@ -16,14 +16,4 @@ public class RomanNumeralConverterTest {
         assertThat(converter.convert(number)).isEqualTo(expectedRomanNumber);
     }
 
-    @Test
-    void convert2_getII() {
-        assertThat(converter.convert(2)).isEqualTo("II");
-    }
-
-    @Test
-    void convert3_getIII() {
-        assertThat(converter.convert(3)).isEqualTo("III");
-    }
-
 }
