@@ -25,7 +25,7 @@ public class RomanNumeralConverter {
                 result.deleteCharAt(result.length()-1);
                 tempInt += RomanNumber.convertCharToIntValue(lastChar);
             }
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < repeatInterval+1; i++) {
                 tempInt += romanNumber.getArabicValue();
             }
 
