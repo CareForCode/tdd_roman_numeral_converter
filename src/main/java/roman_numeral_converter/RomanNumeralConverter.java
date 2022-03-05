@@ -25,6 +25,7 @@ public class RomanNumeralConverter {
 
     private void appendRepeatedNumbers(StringBuilder result, int remainder, RomanNumber romanNumber) {
         if (remainder == 4) {
+
         }
         result.append(romanNumber.getRomanString().repeat(Math.max(0, remainder)));
     }
