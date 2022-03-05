@@ -45,6 +45,6 @@ public enum RomanNumber {
     }
 
     public RomanNumber getNextRomanNumber() {
-        return values()[Math.min(values().length-2, this.ordinal()+1)];
+        return values()[Math.min(values().length-1, this.ordinal()+1)];
     }
 }

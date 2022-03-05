@@ -25,7 +25,7 @@ public class RomanNumberTest {
     }
 
     @Test
-    void getNextRomanNumber_X_isX() {
-        assertThat(RomanNumber.X.getNextRomanNumber()).isEqualTo(RomanNumber.X);
+    void getNextRomanNumber_X_isUnknown() {
+        assertThat(RomanNumber.X.getNextRomanNumber()).isEqualTo(RomanNumber.UNKNOWN);
     }
 }
