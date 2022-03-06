@@ -13,6 +13,7 @@ public class RomanNumeralConverter {
     }
 
     enum NumeralToDecimal {
+        FIFTY(50,"L"),
         TEN(10,"X"),
         FIVE(5,"V"),
         ONE(1, "I");
