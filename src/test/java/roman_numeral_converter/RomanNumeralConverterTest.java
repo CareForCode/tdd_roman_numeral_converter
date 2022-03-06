@@ -22,6 +22,9 @@ public class RomanNumeralConverterTest {
             "18,XVIII",
             "30,XXX",
             "50,L",
+            "100,C",
+            "500,D",
+            "1000,M",
     })
     public void convertDecimalToRomanNumeral(int decimal, String expectedRoman) {
         assertThat(convert(decimal)).isEqualTo(expectedRoman);

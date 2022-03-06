@@ -13,6 +13,9 @@ public class RomanNumeralConverter {
     }
 
     enum NumeralToDecimal {
+        THOUSAND(1000,"M"),
+        FIVE_HUNDRED(500,"D"),
+        HUNDRED(100,"C"),
         FIFTY(50,"L"),
         TEN(10,"X"),
         FIVE(5,"V"),
