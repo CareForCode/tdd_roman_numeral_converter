@@ -4,13 +4,10 @@ public class RomanNumeralConverter {
     public static String convert(int decimal) {
         StringBuilder result = new StringBuilder();
         for (NumeralToDecimal value : NumeralToDecimal.values()) {
-            if (decimal >= value.decimal) {
+            while (decimal >= value.decimal) {
                 result.append(value.romanNumeral);
                 decimal -= value.decimal;
             }
-        }
-        for (int i = 0; i < decimal; i++) {
-            result.append("I");
         }
         return result.toString();
     }
