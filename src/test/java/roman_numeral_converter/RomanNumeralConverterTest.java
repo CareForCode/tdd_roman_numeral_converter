@@ -10,7 +10,7 @@ import static roman_numeral_converter.RomanNumeralConverter.convert;
 public class RomanNumeralConverterTest {
 
     @ParameterizedTest
-    @CsvSource({"1,I", "2,II", "3,III", "5,V", "6,VI", "8, VIII", "10,X"})
+    @CsvSource({"1,I", "2,II", "3,III", "5,V", "6,VI", "8, VIII", "10,X", "12,XII"})
     public void convertDecimalToRomanNumeral(int decimal, String expectedRoman) {
         assertThat(convert(decimal)).isEqualTo(expectedRoman);
     }
