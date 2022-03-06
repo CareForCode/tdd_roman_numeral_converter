@@ -30,6 +30,9 @@ public class RomanNumeralConverterTest {
             "294,CCXCIV",
             "500,D",
             "1000,M",
+            "2019,MMXIX",
+            "2945,MMCMXLV",
+            "3494,MMMCDXCIV",
     })
     public void convertDecimalToRomanNumeral(int decimal, String expectedRoman) {
         assertThat(convert(decimal)).isEqualTo(expectedRoman);

@@ -14,7 +14,9 @@ public class RomanNumeralConverter {
 
     enum NumeralToDecimal {
         THOUSAND(1000,"M"),
+        NINE_HUNDRED(900,"CM"),
         FIVE_HUNDRED(500,"D"),
+        FOUR_HUNDRED(400,"CD"),
         HUNDRED(100,"C"),
         NINETY(90,"XC"),
         FIFTY(50,"L"),
