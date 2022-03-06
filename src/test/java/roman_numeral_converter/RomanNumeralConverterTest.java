@@ -22,9 +22,12 @@ public class RomanNumeralConverterTest {
             "10,X",
             "12,XII",
             "18,XVIII",
+            "29,XXIX",
             "30,XXX",
             "50,L",
+            "80,LXXX",
             "100,C",
+            "294,CCXCIV",
             "500,D",
             "1000,M",
     })
