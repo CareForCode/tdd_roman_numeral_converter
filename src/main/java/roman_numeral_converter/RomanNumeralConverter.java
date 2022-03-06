@@ -2,17 +2,17 @@ package roman_numeral_converter;
 
 public class RomanNumeralConverter {
     public static String convert(int decimal) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (NumeralToDecimal value : NumeralToDecimal.values()) {
             if (decimal >= value.decimal) {
-                result += value.romanNumeral;
+                result.append(value.romanNumeral);
                 decimal -= value.decimal;
             }
         }
         for (int i = 0; i < decimal; i++) {
-            result += "I";
+            result.append("I");
         }
-        return result;
+        return result.toString();
     }
 
     enum NumeralToDecimal {
